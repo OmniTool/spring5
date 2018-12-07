@@ -35,6 +35,7 @@ public class AopAspectJTest {
     @DisplayName("Test AOP")
     void testAOP() {
         String name =  bar.sellCoctail(customer).getName();
+        System.out.println();
         System.out.println("============COMPLETED");
 //        assertEquals("Exp Res", name);
 

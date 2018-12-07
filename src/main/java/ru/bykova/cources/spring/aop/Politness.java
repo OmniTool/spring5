@@ -21,7 +21,7 @@ public class Politness {
 
     @Before("@annotation(Congrats)")
     public final void sayHello(@NotNull JoinPoint joinPoint) {
-        System.out.println("==========Hello " + ((Customer) joinPoint.getArgs()[0]).getName() + ". How are you doing? \n");
+        System.out.println("==========Hello " + ((Customer) joinPoint.getArgs()[0]).getName() + ". How are you doing?");
     }
 
     @AfterReturning(pointcut = "@annotation(FeedbackNeeded)", returning = "retVal")
