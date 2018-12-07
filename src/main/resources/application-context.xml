@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!--<bean id="name" class="java.lang.String" c:value="Russia"/>-->
+
+    <bean id="russia" class="ru.bykova.cources.spring.spring5.Country"
+          c:name="Russia"
+          c:groupName="RU"/>
+    <bean id="ukraine" class="ru.bykova.cources.spring.spring5.Country"
+          c:name="Ukraine"
+          c:groupName="UKR"/>
+
+    <bean id="ivan" class="ru.bykova.cources.spring.spring5.Person"
+          c:id="1"
+          c:name="Ivan Ivanov"
+          c:age="17"
+          c:contacts-ref="contacts"
+          c:country-ref="russia"
+          c:height="1.78"
+          c:isProgrammer="true"/>
+
+    <util:list id="contacts">
+        <value>22-22-22</value>
+        <value>email@mail.ru</value>
+    </util:list>
+
+</beans>

@@ -1,4 +1,4 @@
-package ru.bykova.cources.spring.spring5.singleton;
+package ru.bykova.cources.spring.singleton;
 
 // Пример double check locker
 // проблемы возникают при работе нескольких класс-лоадеров => spring
