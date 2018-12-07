@@ -13,20 +13,20 @@ import org.aspectj.lang.annotation.Before;
 import org.springframework.stereotype.Component;
 import ru.bykova.cources.spring.spring5.Customer;
 
-@FieldDefaults(level = AccessLevel.PRIVATE)
+//@FieldDefaults(level = AccessLevel.PRIVATE)
 @Component
 @Aspect
-@Slf4j
+//@Slf4j
 public class Politness {
 
     @Before("@annotation(Congrats)")
     public final void sayHello(@NotNull JoinPoint joinPoint) {
-        System.out.println("Hello " + ((Customer) joinPoint.getArgs()[0]).getName() + ". How are you doing? \n");
+        System.out.println("==========Hello " + ((Customer) joinPoint.getArgs()[0]).getName() + ". How are you doing? \n");
     }
 
     @AfterReturning(pointcut = "@annotation(FeedbackNeeded)", returning = "retVal")
     public final void askOpinion(@NotNull Object retVal) {
-        System.out.printf("IS GOOD ENOUGH? ", ((Cocktail) retVal).getName());
+        System.out.printf("===========IS GOOD ENOUGH? ", ((Cocktail) retVal).getName());
     }
 
 //    @Before("execution(* sellSquishee(..))")

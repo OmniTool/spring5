@@ -1,20 +1,18 @@
-package ru.bykova.cources.spring.aop;
+package ru.bykova.cources.spring.spring5;
 
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
-import org.junit.Before;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import ru.bykova.cources.spring.spring5.Customer;
+import ru.bykova.cources.spring.aop.Bar;
 import ru.bykova.cources.spring.spring5.Person;
 
 import static lombok.AccessLevel.PRIVATE;
-import static org.junit.Assert.*;
 
 @SpringBootTest
 @ExtendWith(SpringExtension.class)
@@ -37,7 +35,7 @@ public class AopAspectJTest {
     @DisplayName("Test AOP")
     void testAOP() {
         String name =  bar.sellCoctail(customer).getName();
-        System.out.println();
+        System.out.println("============COMPLETED");
 //        assertEquals("Exp Res", name);
 
 

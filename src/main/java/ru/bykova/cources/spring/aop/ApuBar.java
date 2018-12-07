@@ -12,15 +12,17 @@ import ru.bykova.cources.spring.spring5.Person;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class ApuBar implements Bar{
 
-    @NotNull
     @Override
+    @NotNull
     @Congrats
-//    @FeedbackNeeded
+    @FeedbackNeeded
     public Cocktail sellCoctail(@NotNull Person person) {
         if (person.isBroke())
         {
+            System.out.println("==========POOR BABY!");
             throw new CustomBrokenException();
         }
+        System.out.println("==========SOLD!");
         return () -> "Usual Cocktail";
     }
 }

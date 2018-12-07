@@ -32,4 +32,6 @@
         <value>email@mail.ru</value>
     </util:list>
 
+    <bean id="politness" class="ru.bykova.cources.spring.aop.Politness"/>
+
 </beans>
