@@ -17,13 +17,14 @@
           c:name="Ukraine"
           c:groupName="UKR"/>
 
-    <bean id="ivan" class="ru.bykova.cources.spring.spring5.Person"
+    <bean id="ivan" class="ru.bykova.cources.spring.spring5.Customer"
           c:id="1"
           c:name="Ivan Ivanov"
           c:age="17"
           c:contacts-ref="contacts"
           c:country-ref="russia"
           c:height="1.78"
+          c:isBroke="false"
           c:isProgrammer="true"/>
 
     <util:list id="contacts">

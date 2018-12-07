@@ -1,22 +1,19 @@
 package ru.bykova.cources.spring.spring5;
 
-import lombok.*;
-import lombok.experimental.FieldDefaults;
+public interface Person {
+    Long getId();
 
-import java.util.List;
+    String getName();
 
-@Data
-@Builder
-@AllArgsConstructor
-@FieldDefaults(level = AccessLevel.PRIVATE)
-class Person {
+    int getAge();
 
-    Long id;
-    String name;
-    Country country;
-    int age;
-    double height;
-    boolean isProgrammer;
-    @Singular
-    List<String> contacts;
+    boolean isBroke();
+
+    void setId(Long id);
+
+    void setName(String name);
+
+    void setAge(int age);
+
+    void setBroke(boolean isBroke);
 }

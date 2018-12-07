@@ -6,6 +6,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ImportResource;
+import ru.bykova.cources.spring.aop.ApuBar;
+import ru.bykova.cources.spring.aop.Bar;
 
 import java.util.List;
 
@@ -24,7 +26,7 @@ public class Spring5Application {
 
     @Bean
     Person vasya(Country russia) {
-        return Person.builder()
+        return Customer.builder()
                 .age(15)
                 .name("Уася")
                 .contact("222-33-222")
@@ -33,6 +35,21 @@ public class Spring5Application {
                 .country(russia)
                 .build();
     }
+
+    @Bean
+    Bar bar() {
+        return ApuBar.builder().build();
+    }
+
+    @Bean
+    Person customer() {
+        return Customer.builder()
+                .isBroke(false)
+                .age(15)
+                .name("Уася")
+                .build();
+    }
+
 }
 
 
