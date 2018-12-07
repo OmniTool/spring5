@@ -25,16 +25,17 @@ import static org.junit.jupiter.api.Assertions.*;
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 class Spring5ApplicationTest { //for ru.vlapin.courses.spring.springfundamwntals5.SpringFundamentals5Application
 
-    Person person;
+    Person vasya;
 
     @Test
     @SneakyThrows
     @DisplayName("Person injects correctly")
     void testName() {
+        System.out.println(vasya);
         // given
-        assertThat(person.getName(), is("Уася"));
+        assertThat(vasya.getName(), is("Уася"));
         // when
-        System.out.println(person);
+
         // then
     }
 }
